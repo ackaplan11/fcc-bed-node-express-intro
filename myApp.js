@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 var express = require('express');
 var app = express();
 console.log('Hello World')
@@ -7,7 +9,8 @@ app.get('/', (req, res) => {
 })
 
 app.get('/json', (req, res) => {
-    res.json({"message": "Hello json"})
+    const message = (process.env.MESSAGE_STYLE == 'uppercase') ? "HELLO JSON" : "Hello json"
+    res.json({"message": message})
 })
 //Serves 'public' assets to /public route
 app.use('/public', express.static('public'))
