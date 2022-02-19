@@ -1,12 +1,17 @@
 require('dotenv').config()
 
-var express = require('express');
-var app = express();
+const bodyParser = require('body-parser')
+const express = require('express');
+const app = express();
 
 app.use((req, res, next) => {
     console.log(`${req.method} ${req.path} - ${req.ip}`)
     next()
 })
+
+//Figure out wtf this does
+
+app.use(bodyParser.urlencoded({ extended: false }))
 
 //REST API - REpresentational State Transfer API allows data exchanges without the need for clients to know
 //detials about the server, only the endpoint and the verb
