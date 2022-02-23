@@ -59,5 +59,5 @@ app.route('/name').get((req, res) => {
 
 app.use('/public', express.static('public'))
 
-//QUESTION - what is the imporance of module.exports = app
+//QUESTION - what is the imporance of module.exports = app?
 module.exports = app;
