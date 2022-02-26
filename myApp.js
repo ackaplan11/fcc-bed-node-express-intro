@@ -61,4 +61,6 @@ app.use('/public', express.static('public'))
 
 //QUESTION - what is the imporance of module.exports = app?
 //const fs = require('fs') - commonJS module
+//  loaded syncro, in order 
+//  built into NodeJS
 module.exports = app;
