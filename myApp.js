@@ -60,4 +60,5 @@ app.route('/name').get((req, res) => {
 app.use('/public', express.static('public'))
 
 //QUESTION - what is the imporance of module.exports = app?
+//const fs = require('fs') - commonJS module
 module.exports = app;
