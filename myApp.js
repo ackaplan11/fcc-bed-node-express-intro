@@ -63,4 +63,7 @@ app.use('/public', express.static('public'))
 //const fs = require('fs') - commonJS module
 //  loaded syncro, in order 
 //  built into NodeJS
+//import module from 'module' - ES module - frontend javascript standard
+//  loaded async
+//  to allow for use in a js file, add {"type": "module"} to package.json
 module.exports = app;
